@@ -81,9 +81,9 @@ const Navigation: React.FC<Props> = ({
         dark ? (hasWhiteBackground ? "bg-white" : "bg-neutral-50") : "bg-white"
       } ${
         scrollTop < scrollThreshold ? "h-20 lg:h-32" : "h-20"
-      } fixed flex items-center justify-center top-0 z-30 ${className || ""}`}
+      } fixed grid grid-cols-[1fr_min(1216px,100%)_1fr] [&>*]:col-[2] items-center justify-center top-0 z-30 ${className || ""}`}
     >
-      <div className="container-width justify-between flex">
+      <div className="justify-between flex">
         {baseUrl ? (
           <a className="z-20" href={baseUrl}>
             {Image}

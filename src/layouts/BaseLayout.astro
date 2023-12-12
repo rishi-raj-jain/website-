@@ -1,6 +1,6 @@
 ---
 import type { MarkdownLayoutProps } from "astro";
-import { Navigation, Footer } from "@components";
+import { Navigation, Footer, GridContainer } from "@components";
 import CommonUtils from "@util/CommonUtils";
 import LanguageUtils from "@util/LanguageUtils";
 import type { IMenuMarkdown } from "@interfaces/IMenu";
@@ -62,7 +62,7 @@ const isProduction = import.meta.env.MODE === "production";
     <title>{frontmatter?.title} - Tolocar Project</title>
   </head>
   <body class="w-full font-inter antialiased h-full tracking-[-0.02em]">
-    <main class="flex flex-col items-center h-full overflow-x-hidden">
+    <main class="h-full overflow-x-hidden">
       <Navigation
         baseUrl={baseUrl}
         path={path}
